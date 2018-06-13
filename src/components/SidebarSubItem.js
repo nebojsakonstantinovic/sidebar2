@@ -2,7 +2,7 @@ import React from 'react';
 
 const SidebarSubItem = ({ title, onClick }) => {
   return (
-    <div className="mt-0" style={{color: '#FFF', padding: '20px', border: '1px solid #FFF', backgroundColor: 'gray'}} onClick={onClick}>{title}</div>
+    <li className="mt-0 list-group-item" style={{color: '#FFF', padding: '20px', border: '1px solid #FFF', backgroundColor: 'gray'}} onClick={onClick}>{title}</li>
   )
 }
 

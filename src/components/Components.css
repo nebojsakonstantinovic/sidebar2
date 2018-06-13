@@ -1,5 +1,8 @@
 .bar { 
-  width: 200px;
   height: 100%;
   background-color: #000;
+ }
+
+ .margin-l-15{
+   margin-right: -13px;
  }

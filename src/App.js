@@ -7,7 +7,13 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar/>
-        <SidebarMenu/>
+        <div className="row height100">
+          <div className="col-md-3 text-center bar">
+            <SidebarMenu className="margin-l-15"/>
+          </div>
+      
+          <div className="col-md-9 text-center">text</div>
+        </div>
       </div>
     );
   }

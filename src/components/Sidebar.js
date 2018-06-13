@@ -16,21 +16,29 @@ class SidebarMenu extends Component {
   render() {
     const { activeTab } = this.state;
     return (
-      <div className="bar">
-        <SidebarItem icon='fas fa-user' title='catalog' active={activeTab === 'catalog'} onClick={this.setActiveTab('catalog')}>
-          <SidebarSubItem title='mi' onClick={console.log} />
-          <SidebarSubItem title='mir' onClick={console.log} />
-          <SidebarSubItem title='mirk' onClick={console.log} />
-          <SidebarSubItem title='mirko' onClick={console.log} />
-        </SidebarItem>
-        <SidebarItem icon='fas fa-anchor' title='catalog2' active={activeTab === 'catalog2'} onClick={this.setActiveTab('catalog2')}>
-          <SidebarSubItem title='mi 2' onClick={console.log} />
-          <SidebarSubItem title='mir 2' onClick={console.log} />
-          <SidebarSubItem title='mirk 2' onClick={console.log} />
-          <SidebarSubItem title='mirko 2' onClick={console.log} />
-        </SidebarItem>
+      <div className="margin-l-15">
+        <ul className="list-group">
+        <li className="list-group-item p-0">
+          <SidebarItem icon='fas fa-user' title='catalog' active={activeTab === 'catalog'} onClick={this.setActiveTab('catalog')}>
+            <SidebarSubItem title='mi' onClick={console.log} />
+            <SidebarSubItem title='mir' onClick={console.log} />
+            <SidebarSubItem title='mirk' onClick={console.log} />
+            <SidebarSubItem title='mirko' onClick={console.log} />
+          </SidebarItem>
+        </li>
+        <li className="list-group-item p-0">
+          <SidebarItem icon='fas fa-anchor' title='catalog2' active={activeTab === 'catalog2'} onClick={this.setActiveTab('catalog2')}>
+            <SidebarSubItem title='mi 2' onClick={console.log} />
+            <SidebarSubItem title='mir 2' onClick={console.log} />
+            <SidebarSubItem title='mirk 2' onClick={console.log} />
+            <SidebarSubItem title='mirko 2' onClick={console.log} />
+          </SidebarItem>
+        </li>
+        <li className="list-group-item p-0">
         <SidebarItem icon='fas fa-align-justify' active={activeTab === 'catalog2'} onClick={this.setActiveTab('catalog2')}>
         </SidebarItem>
+        </li>
+        </ul>
       </div>
     );
   }

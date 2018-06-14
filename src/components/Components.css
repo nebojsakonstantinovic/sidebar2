@@ -1,6 +1,6 @@
 .bar { 
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: #000;
  }
 
  .margin-l-15{
@@ -9,44 +9,4 @@
 
  .custom-ul {
    width: 200px;
- }
-
- /* .sidebarUl {
-  background-color: rgba(0, 0, 0, 0.6) !important;
- } */
-
-/* botstrap */
-
- .list-group-item {
-   background-color: rgba(0, 0, 0, 0.0);
- }
-
- .liItem:hover {
-  background-color: rgba(0, 0, 0, 1.0);
-  cursor: pointer;
- }
-
- /* .liSubItem {
-  background-color: rgba(0, 0, 0, 0.8);
- }
-
- .liSubItem:hover {
-  background-color: rgba(0, 0, 0, 1);
- } */
-/* 
- .sideBarExpanded {
-   width: 300px;
- }
-
- .sideBarMinified {
-   width: 90px;
- } */
-
- .toggle-icon{
-   width: 40px;
-   height: 40px;
- }
-
- .tLeft{
-   text-align: left;
  }

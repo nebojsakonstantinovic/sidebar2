@@ -3,12 +3,7 @@ body, html, #root, .App {
   height: 100%;
 }
 
-.bar { 
-  width: '200px';
-  height: '100%';
-  background-color: '#000';
- }
-
-.height100{
-  height: 100%;
+.shones{
+  width: 100%;
+  height: calc(100vh - 56px);
 }

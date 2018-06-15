@@ -1,12 +1,52 @@
 .bar { 
   height: 100%;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.8); 
  }
 
- .margin-l-15{
-   margin-right: -13px;
+.custom-ul {
+  width: 200px;
  }
 
- .custom-ul {
-   width: 200px;
+.list-group-item {
+  background-color: transparent;
  }
+
+.liItem:hover {
+  background-color: rgba(0, 0, 0, 1.0);
+  cursor: pointer;
+ }
+
+.liSubItem {
+  background-color: rgba(0, 0, 0, 0.8);
+ }
+
+ .liSubItem:hover {
+  background-color: rgba(0, 0, 0, 1);
+ } 
+ 
+ .sideBarExpanded {
+   width: 300px;
+ }
+
+ .sideBarMinified {
+   width: 90px;
+ } 
+
+ .toggle-icon{
+  width: 40px;
+  height: 40px;
+}
+
+.tLeft{
+  text-align: left;
+}
+
+/* dugme */
+
+.custom {
+  display: none;
+  position: absolute;
+  top: 4%;
+  left: 3%;
+  z-index: 20;
+}

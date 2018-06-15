@@ -69,13 +69,18 @@ class App extends Component {
     }
     return (
       <div className="App">
+        <span className="custom">
+          <i className="fas fa-align-justify"></i>
+        </span>
         <Navbar />
-        <div className="row height100">
-          <div className={`${sidebarClass} text-center bar p-0`}>
-            <Sidebar className="margin-l-15" expanded={sidebarExpanded} onSidebarChange={this.updateSidebar} />
-          </div>
+        <div className="container height100 m-0 p-0">
+          <div className="row height100">
+            <div className={`${sidebarClass} text-center bar p-0`}>
+              <Sidebar expanded={sidebarExpanded} onSidebarChange={this.updateSidebar} />
+            </div>
 
-          <div className={`${containerClass} text-center`}>text</div>
+            <div className={`${containerClass} text-center p-0`}>text</div>
+          </div>
         </div>
       </div>
     );

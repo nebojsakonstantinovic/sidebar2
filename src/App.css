@@ -10,5 +10,6 @@ body, html, #root, .App {
  }
 
 .height100{
-  height: 100%;
+  height: calc(100vh - 56px);
+  
 }

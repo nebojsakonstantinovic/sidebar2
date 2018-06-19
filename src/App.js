@@ -20,40 +20,65 @@ class App extends Component {
     this.setState({ sidebarExpanded: !this.state.sidebarExpanded })
   }
 
-//////////////////////////////
+  //////////////////////////////
+
+  // componentDidMount = () => {
+  //   //console.log(this.state.height);
+  //   // Additionally I could have just used an arrow function for the binding `this` to the component...
+  //   window.addEventListener("resize", this.updateDimensions);
+  //   window.addEventListener("resize", this.updateExpandedState);
+  // }
+
+  // updateExpandedState = () => {
+  //   const { sidebarExpanded, width } = this.state;
+  //   console.log("method", sidebarExpanded);
+
+  //   if (width < 600) {
+  //     this.setState({ sidebarExpanded: false })
+  //   }
+  //   if (width > 650) {
+  //     this.setState({ sidebarExpanded: true })
+  //   }
+  // }
+
+  // updateDimensions = () => {
+  //   this.setState({
+  //     height: window.innerHeight,
+  //     width: window.innerWidth
+  //   });
+  // }
+
+  // componentWillUnmount = () => {
+  //   window.removeEventListener("resize", this.updateDimensions);
+  //   window.removeEventListener("resize", this.this.updateExpandedState);
+  // }
+
+  ///////////////////////////////////////////
 
   componentDidMount = () => {
-     //console.log(this.state.height);
-    // Additionally I could have just used an arrow function for the binding `this` to the component...
-    window.addEventListener("resize", this.updateDimensions);
-    window.addEventListener("resize",this.updateExpandedState);
+    this.updateExpandedState();
+    window.addEventListener("resize", this.updateExpandedState);
   }
 
   updateExpandedState = () => {
-    const { sidebarExpanded, width } = this.state;
-    console.log("method", sidebarExpanded);
-    
-    if (width < 600) {
+    if (window.matchMedia("(min-width: 700px)").matches) {
+      /* the viewport is at least 400 pixels wide */
+      this.setState({ sidebarExpanded: true })
+    } else {
+      /* the viewport is less than 400 pixels wide */
       this.setState({ sidebarExpanded: false })
     }
-    if (width > 650) {
-      this.setState({ sidebarExpanded: true })
-    }  
   }
+  
 
-  updateDimensions = () => {
-    this.setState({
-      height: window.innerHeight, 
-      width: window.innerWidth
-    });
-  }
+
 
   componentWillUnmount = () => {
-    window.removeEventListener("resize", this.updateDimensions);
-    window.removeEventListener("resize", this.this.updateExpandedState);
+    window.removeEventListener("resize", this.updateExpandedState);
   }
 
-////////////////////////////////////////////////////////
+
+  ////////////////////////////////////////////////////////
 
   render() {
     // console.log(this.state.height);

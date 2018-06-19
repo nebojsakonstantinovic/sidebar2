@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Sidebar, Navbar } from './components';
+import { Sidebar, Navbar, SidebarMobile } from './components';
 
 class App extends Component {
 
@@ -10,6 +10,7 @@ class App extends Component {
     sidebarExpanded: true,
     height: window.innerHeight,
     width: window.innerWidth,
+    uslov: false,
   };
 
   barfullClass = `${this.state.barClass} text-center bar p-0`
@@ -58,7 +59,7 @@ class App extends Component {
     // console.log(this.state.height);
     console.log(this.state.width);
     console.log("render", this.state.sidebarExpanded);
-    const { sidebarExpanded } = this.state;
+    const { sidebarExpanded, uslov } = this.state;
     let sidebarClass, containerClass;
     if (sidebarExpanded) {
       sidebarClass = 'col-md-3';
@@ -79,7 +80,9 @@ class App extends Component {
               <Sidebar expanded={sidebarExpanded} onSidebarChange={this.updateSidebar} />
             </div>
 
-            <div className={`${containerClass} text-center p-0`}>text</div>
+            <div className={`${containerClass} text-center p-0`}>
+              text
+            </div>
           </div>
         </div>
       </div>
